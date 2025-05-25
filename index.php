@@ -18,16 +18,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FurryID Verification</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
+      padding: 20px;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #667eea, #764ba2);
       color: #fff;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      overflow: hidden;
     }
 
     .container {
@@ -35,9 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       color: #333;
       border-radius: 16px;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-      padding: 40px;
-      max-width: 500px;
+      padding: 30px 20px;
       width: 100%;
+      max-width: 500px;
       text-align: center;
       animation: fadeIn 1s ease-out;
     }
@@ -48,7 +52,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     h1 {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    a {
+      color: #764ba2;
+      text-decoration: underline;
     }
 
     .button {
@@ -71,18 +86,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
     }
 
-    form {
-      animation: fadeIn 0.8s ease;
-    }
-
     .captcha-container {
       margin: 20px 0;
     }
 
     img.logo {
       width: 64px;
+      height: 64px;
       border-radius: 50%;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .button {
+        font-size: 15px;
+        padding: 10px 20px;
+      }
+      .container {
+        padding: 24px 16px;
+      }
     }
   </style>
 </head>
@@ -101,8 +126,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php else: ?>
       <h1>You're Verified!</h1>
       <p>
-        FurryID is a chaotic but legit CAPTCHA solution. It's Simon Says with audio, JS, CSS, and PHP magic.<br><br>
-        Made with ❤️ by Naikia/Noan under the <a href="https://opensource.org/license/mit" target="_blank">MIT License</a>.
+        <strong>FurryID</strong> is a chaotic but legit CAPTCHA.<br>
+        It's Simon Says with audio, JavaScript, CSS, and PHP wizardry.<br><br>
+        Made with ❤️ by Naikia/Noan.<br>
+        Licensed under the <a href="https://opensource.org/license/mit" target="_blank">MIT License</a>.
       </p>
       <a href="https://github.com/naikia/captcha" class="button" target="_blank">View on GitHub</a>
     <?php endif; ?>

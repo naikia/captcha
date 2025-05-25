@@ -1,30 +1,60 @@
 ![FurryID Logo](https://gravatar.com/userimage/263388927/a29d9fe8ade6630da27125300e648a27.jpeg?size=256&cache=1748089911022 "FurryID Logo")
 
-# FurryID Captcha's made insane.
+# 🧠 FurryID — Captchas Made Insane
 
-I hate captcha's and I made it harder to captcha.
+I hate captchas, so I made one that's *actually* harder to break — but fun as hell.
 
-This is dead ass a proper captcha solution that you can use idrc.
+FurryID is a **legit Simon Says-style captcha** with sound, CSS effects, and interactive logic, all powered by JavaScript, PHP, and a sprinkle of chaos.
 
-It's siomon says with audios made in JS and CSS that displays using PHP.
+---
 
-# How to deploy
+## 🚀 Features
 
-Add the files in your scripts, styles, and components (or how ever you format your site).
+- 🔊 Audio-based Simon Says verification  
+- 🎨 CSS animations + modern gradient styles  
+- 🧩 Fully responsive design — works on mobile, tablet, and desktop  
+- 🛡️ Secure session-based backend using PHP  
+- ⚡ Single-file verification example page  
+- ✅ MIT-licensed and ready to drop into your project  
 
+---
 
-Then edit 
-```
-window.location.href = '/getfurryid';
-```
-on line 185 to be where ever you want it to go (or edit it so people cant go to /yourpage in the Future)
+## 🔧 How to Deploy
 
-And its done
+1. **Clone or copy** the repository into your project.
+2. Place the files into your site structure (`/scripts`, `/styles`, `/components`, etc.).
+3. Update this line in the JavaScript file:
+   ```js
+   window.location.href = '/getfurryid';
+   ```
+   🔁 Change `/getfurryid` to wherever you want verified users to go.
+4. Make sure your server supports **PHP sessions** and you're good to go.
 
-#
+---
 
-Made with Love by Naikia/Noan
+## 📱 Works Anywhere
 
-Everything is licensed under the MIT License Read More <a href="https://opensource.org/license/mit">Here</a>
+The included example (`/verified`) is a **fully responsive** and **animated** verification page with a GitHub button and a thank-you message. It works seamlessly on:
 
-©2025 Naikia Limited
+- ✅ iPhones and Android  
+- ✅ Tablets  
+- ✅ Desktop browsers  
+
+---
+
+## 🧪 Example
+
+After completing the captcha, users are sent to `/verified`:
+
+- 📝 Displays a quick description of FurryID  
+- 🔗 Button linking to the GitHub repo  
+- ✨ Smooth animations and clean layout  
+
+---
+
+## 📄 License
+
+Made with ❤️ by [Naikia / Noan](https://github.com/naikia)  
+Licensed under the [MIT License](https://opensource.org/license/mit)
+
+© 2025 Naikia Limited
