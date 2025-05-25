@@ -1,0 +1,387 @@
+.furryid-captcha-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 400px;
+  margin: 20px 0;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.captcha-widget {
+  padding: 20px;
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo-mini {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #667eea;
+}
+
+.logo-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffc107;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.verified {
+  background: #28a745;
+  animation: none;
+}
+
+.status-text {
+  font-size: 12px;
+  color: #666;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.verification-area {
+  margin: 15px 0;
+}
+
+.verify-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: #333;
+}
+
+.verify-button:hover {
+  border-color: #667eea;
+  background: #f0f4ff;
+}
+
+.verify-button.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.verify-button.verified {
+  border-color: #28a745;
+  background: #d4edda;
+  color: #155724;
+}
+
+.verify-icon {
+  font-size: 18px;
+}
+
+.verify-text {
+  flex: 1;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.verify-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.verify-checkbox.checked {
+  background: #28a745;
+  border-color: #28a745;
+}
+
+.checkmark {
+  color: white;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.verify-checkbox.checked .checkmark {
+  opacity: 1;
+}
+
+.challenge-area {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.challenge-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.challenge-header h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.challenge-header p {
+  font-size: 12px;
+  color: #666;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.round-display {
+  font-size: 12px;
+  font-weight: 600;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #e9ecef;
+  border-radius: 3px;
+  margin-left: 15px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.simon-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.simon-btn {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.simon-btn:hover {
+  transform: scale(1.05);
+}
+
+.simon-btn.red {
+  background: radial-gradient(circle, #e74c3c, #c0392b);
+}
+
+.simon-btn.blue {
+  background: radial-gradient(circle, #3498db, #2980b9);
+}
+
+.simon-btn.green {
+  background: radial-gradient(circle, #2ecc71, #27ae60);
+}
+
+.simon-btn.yellow {
+  background: radial-gradient(circle, #f1c40f, #f39c12);
+}
+
+.simon-btn.active {
+  transform: scale(1.1);
+  filter: brightness(1.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.game-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.start-game-btn {
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-game-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+.start-game-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.game-message {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  min-height: 20px;
+}
+
+.game-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.game-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.game-message.info {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.success-area {
+  text-align: center;
+  padding: 30px 20px;
+  animation: successSlide 0.8s ease-out;
+}
+
+@keyframes successSlide {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.success-content {
+  color: #155724;
+}
+
+.success-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.success-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.success-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 480px) {
+  .furryid-captcha-container {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .simon-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 9px;
+  }
+
+  .simon-board {
+    max-width: 180px;
+  }
+}
